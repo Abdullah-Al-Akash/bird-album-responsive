@@ -44,6 +44,7 @@
                         border-radius: 8px;
                         position: relative;
                         margin: 1%;
+                        overflow: hidden;
                 }
 
                 .photo img {
@@ -79,6 +80,11 @@
                         border: 5px solid brown;
                         border-radius: 10px;
                         background-color: antiquewhite;
+                }
+
+                .photo-frame:hover .photo {
+                        transform: scale(1.5) rotate(-20deg);
+                        transition: transform 2s ease-in-out;
                 }
         </style>
 </head>
