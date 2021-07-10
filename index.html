@@ -27,6 +27,8 @@
                         border-radius: 80%;
                         color: orangered;
                         border: 2px dotted black;
+                        position: relative;
+                        top: 75px;
                 }
 
                 .photo-album {
@@ -86,12 +88,52 @@
                         transform: scale(1.5) rotate(-20deg);
                         transition: transform 2s ease-in-out;
                 }
+
+                .pinwheel img {
+                        width: 20%;
+                }
+
+                .pinwheel {
+                        width: 100%;
+                        margin: 0 auto;
+                        display: flex;
+                        justify-content: flex-end;
+                }
+
+                @keyframes rotate-animation {
+                        50% {
+                                transform: rotate(360deg);
+                        }
+
+                        /* 50% {
+                                transform: rotate(180deg);
+                        } */
+
+                        /* 100% {
+                                transform: rotate(360deg);
+                        } */
+                }
+
+                .container:hover .pinwheel-image {
+                        /* transform: scale(1.5) rotate(360deg);
+                        transition: transform 4s; */
+                        animation: rotate-animation 4s infinite ease-in
+                }
         </style>
 </head>
 
 <body>
         <div class="container">
+
                 <h1>Bird's Photo Album</h1>
+                <div class="pinwheel">
+                        <div>
+                                <img class="pinwheel-image" src="images/pinwheel.png" alt="">
+                        </div>
+                        <div>
+                                <img class="pinwheel-image" src="images/pinwheel.png" alt="">
+                        </div>
+                </div>
                 <div class="photo-album">
                         <div class="photo-frame">
                                 <div class="photo">
